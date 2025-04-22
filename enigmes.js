@@ -36,6 +36,17 @@ const enigmes = [
             "Aucune des r\u00e9ponses"
           ],
           "correctIndex": 1
+        },
+        {
+          "name": "Dérivée à calculer",
+          "question": "Montre que : $\\forall x \\in \\mathbb{R},\\quad f'(x) = \\frac{(1 - e^{2x})e^x}{(1 + e^{2x})^2}$",
+          "answers": [
+            "$\\frac{e^x}{1 + e^{2x}}$",
+            "$\\frac{e^{2x}}{1 + e^{x}}$",
+            "$\\frac{(1 - e^{2x})e^x}{(1 + e^{2x})^2}$",
+            "Aucune des réponses"
+          ],
+          "correctIndex": 2
         }
       ],
       "final": {
