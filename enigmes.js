@@ -38,11 +38,11 @@ const enigmes = [
           "correctIndex": 1
         }
       ],
-      final: {
-        name: "Dernière étape",
-        question: "Quelle est la date de création de xxxxx ? Utilise tes réponses pour le savoir.",
-        code: "41",
-        mapLink: "https://www.google.com/maps?q=48.8566,2.3522"
+      "final": {
+        "name": "Dernière étape",
+        "question": "Quelle est la date de fondation du lieu mystère ?",
+        "code": "73",
+        "locationText": "Rendez-vous devant le grand portail rouge à gauche du gymnase"
       }
     },
     {
