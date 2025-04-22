@@ -16,6 +16,9 @@ function afficherQuestion() {
     return;
   }
 
+  document.getElementById("questionText").classList.remove("hidden");
+  document.getElementById("indicationText").classList.remove("hidden");
+
   const q = activeEnigme.questions[currentQuestionIndex];
   document.getElementById("enigmeTitle").textContent = activeEnigme.name || "Énigme";
   document.getElementById("indicationText").textContent = "Choisis une réponse puis clique sur \"Suivant\".";
@@ -236,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reponsesUtilisateur = [];
     afficherQuestion();
   });
-
+/*
   document.getElementById("codeInput").addEventListener("input", function (e) {
     const input = e.target;
     const validDigits = reponsesUtilisateur.map(r => String(r));
@@ -245,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .filter(char => validDigits.includes(char))
       .join('');
   });
-
+*/
 });
 
 
