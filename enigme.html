@@ -46,33 +46,52 @@
         </div>
       </form>
 
-      <!-- ✅ SECTION SYNTHÈSE -->
-      <div id="syntheseSection" class="hidden mt-10">
-        <h3 id="syntheseTitle" class="text-xl font-semibold text-gray-800 mb-2"></h3>
-        <p id="syntheseQuestion" class="text-gray-700 mb-6"></p>
+ <!-- ✅ SECTION SYNTHÈSE -->
+<div id="syntheseSection" class="hidden mt-10">
+  <h3 id="syntheseTitle" class="text-xl font-semibold text-gray-800 mb-2 text-center"></h3>
+  <p id="syntheseQuestion" class="text-gray-700 mb-6 text-center"></p>
 
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full border border-gray-200 rounded text-sm">
-            <thead class="bg-gray-100">
-              <tr>
-                <th class="py-2 px-4 border-b text-left">#</th>
-                <th class="py-2 px-4 border-b text-left">Question</th>
-                <th class="py-2 px-4 border-b text-left">Réponse choisie</th>
-              </tr>
-            </thead>
-            <tbody id="resumeTableBody" class="bg-white"></tbody>
-          </table>
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full border border-gray-200 rounded text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="py-2 px-4 border-b text-left">#</th>
+          <th class="py-2 px-4 border-b text-left">Question</th>
+          <th class="py-2 px-4 border-b text-left">Réponse choisie</th>
+        </tr>
+      </thead>
+      <tbody id="resumeTableBody" class="bg-white"></tbody>
+    </table>
+  </div>
+
+  <!-- ✅ Centrage total -->
+      <div class="flex flex-col items-center gap-4">
+        <label for="codeInput" class="text-gray-700 font-medium text-center">Entrez le code final pour débloquer l'énigme :</label>
+        <input
+          type="text"
+          id="codeInput"
+          maxlength="10"
+          class="border border-gray-300 rounded px-4 py-2 w-full max-w-xs text-center"
+        />
+        <p id="codeError" class="text-red-500 text-sm hidden">❌ Code incorrect. Réessaie !</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+          <button
+            type="button"
+            id="checkCodeBtn"
+            class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105"
+          >
+            Vérifier le code 🔐
+          </button>
+
+          <button
+            type="button"
+            id="restartBtn"
+            class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105"
+          >
+            🔁 Recommencer l’énigme
+          </button>
         </div>
-
-        <label for="codeInput" class="block text-gray-700 font-medium mb-2">Entrez le code final pour débloquer l'énigme :</label>
-        <input type="text" id="codeInput" class="border border-gray-300 rounded px-4 py-2 w-full max-w-md mb-3" />
-        <p id="codeError" class="text-red-500 text-sm hidden mb-3">❌ Code incorrect. Réessaie !</p>
-        <button type="button" id="checkCodeBtn" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105">
-          Vérifier le code 🔐
-        </button>
-        <button type="button" id="restartBtn" class="mt-4 bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105">
-          🔁 Recommencer l’énigme
-        </button>
       </div>
     </div>
   </div>
