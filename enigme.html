@@ -76,5 +76,18 @@
       </div>
     </div>
   </div>
+
+  <!-- 🎉 Popup de félicitations -->
+<div id="successPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center relative">
+    <h2 class="text-xl font-bold text-green-600 mb-3">🎉 Félicitations !</h2>
+    <p id="popupMessage" class="text-gray-800 mb-4">Vous avez réussi l’énigme.</p>
+    <div id="popupAction" class="mb-4"></div>
+    <button onclick="closePopup()" class="mt-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">
+      Fermer
+    </button>
+  </div>
+</div>
+
 </body>
 </html>

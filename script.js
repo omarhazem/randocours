@@ -158,6 +158,35 @@ function afficherSynthese() {
   errorCode.classList.add("hidden");
 }
 
+function afficherPopupSuccess(message, mapLink = null, locationText = null) {
+  const popup = document.getElementById("successPopup");
+  const msg = document.getElementById("popupMessage");
+  const action = document.getElementById("popupAction");
+
+  msg.textContent = message;
+  action.innerHTML = "";
+
+  if (mapLink) {
+    const btn = document.createElement("a");
+    btn.href = mapLink;
+    btn.target = "_blank";
+    btn.textContent = "🗺️ Voir sur Google Maps";
+    btn.className = "bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded shadow inline-block";
+    action.appendChild(btn);
+  } else if (locationText) {
+    const p = document.createElement("p");
+    p.textContent = "📍 Destination : " + locationText;
+    p.className = "text-sm text-gray-600";
+    action.appendChild(p);
+  }
+
+  popup.classList.remove("hidden");
+}
+
+function closePopup() {
+  document.getElementById("successPopup").classList.add("hidden");
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   afficherQuestion();
@@ -193,7 +222,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorCode = document.getElementById("codeError");
 
     if (code === correctCode) {
-      window.open(link, "_blank");
+      const message = "Félicitations ! Tu as résolu cette énigme.";
+      const mapLink = activeEnigme.final?.mapLink || null;
+      const locationText = activeEnigme.final?.locationText || null;
+      afficherPopupSuccess(message, mapLink, locationText);
     } else {
       errorCode.classList.remove("hidden");
     }
@@ -215,3 +247,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
