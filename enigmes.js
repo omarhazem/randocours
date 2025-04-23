@@ -18,7 +18,7 @@ const enigmes = [
             "la suite $(U_n)_{n \\in \\mathbb{N}}$ est arithmétique de raison $n^2$",
             "la suite $(U_n)_{n \\in \\mathbb{N}}$ est convergente car elle est majorée par 2"
           ],
-          "correctIndex": 1
+          "correctIndex": 0
         },
         {
           "name": "Limites de suites exponentielles",
@@ -35,7 +35,7 @@ const enigmes = [
             "$L = \\lim_{n \\to \\infty} \\frac{2^n (1 + (\\frac{5}{3})^n)}{3^n (1 + (\\frac{2}{3})^n)} = \\lim_{n \\to \\infty} \\frac{2^n}{3^n} = 0$",
             "$L = e^{\\lim_{n \\to \\infty} \\ln\\left(\\frac{2^n + 5^n}{3^n + 2^n}\\right)} = e^{\\lim_{n \\to \\infty} \\frac{\\ln(2^n + 5^n)}{1} - \\frac{\\ln(3^n + 2^n)}{1}} = e^{n \\ln(5) - n \\ln(3)} = e^{n \\ln(\\frac{5}{3})} = 1$"
           ],
-          "correctIndex": 1
+          "correctIndex": 0
         },
         {
           "name": "Somme d'une suite mixte",
@@ -52,30 +52,31 @@ const enigmes = [
             "$S = -\\frac{8}{3} \\left(1 - \\left(\\frac{1}{4}\\right)^n \\right) + \\frac{n^2}{2}$",
             "$S = -\\frac{8}{3n} + \\frac{n(n+1)}{2}$"
           ],
-          "correctIndex": 1
+          "correctIndex": 0
         },        
         {
-          "name": "Question 4",
-          "question": "question olympiade",
+          "name": "Suite récurrente et convergence",
+          "question": "Soit la suite $(u_n)$ définie par $u_0 = 1$ et pour tout $n \\geq 0$, $u_{n+1} = \\frac{u_n^2+3}{2u_n}$. Quelle est la limite de cette suite ?",
           "answers": [
-            "reponse 0",
-            "reponse 1",
-            "reponse 2",
-            "reponse 3",
-            "reponse 4",
-            "reponse 5",
-            "reponse 6",
-            "reponse 7",
-            "reponse 8",
-            "reponse 9",
+            "La suite diverge.",
+            "La suite est constante et vaut 1.",
+            "La suite converge vers $\\sqrt{2}$.",
+            "La suite converge vers $\\sqrt{3}$.",
+            "La suite oscille entre deux valeurs sans converger.",
+            "La suite converge vers 2.",
+            "La suite converge vers $\\frac{3}{2}$.",
+            "La suite a une limite différente selon la parité de $n$.",
+            "La suite converge vers 1.",
+            "La suite est strictement décroissante et converge vers 1."
           ],
-          "correctIndex": 1
+          "correctIndex": 3
         }
+        
       ],
       "final": {
-        "name": "🔓 Déverrouille le mystère",
-        "question": "Bravo d’être arrivé jusque-là ! Tu as toutes les réponses… mais sauras-tu les assembler pour débloquer le secret final ? 🔐",
-        "code": "41",
+        "name": "Synthèse",
+        "question": "Bravo d’être arrivé jusque-là ! vous avez toutes les réponses… mais Saurez-vous les assembler pour débloquer le secret final ? 🔐",
+        "code": "0003",
         "locationText": "Direction l’endroit où la nature est toujours au cœur des débats."
       }
     },
@@ -135,28 +136,28 @@ const enigmes = [
           "correctIndex": 0
         },     
         {
-          "name": "Question 4",
-          "question": "question olympiade",
+          "name": "Dérivée et intégrale d'une fonction hyperbolique",
+          "question": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$. Quelle est la valeur de $\\int_{0}^{\\ln(3)} f'(x) \\, dx$ ?",
           "answers": [
-            "reponse 0",
-            "reponse 1",
-            "reponse 2",
-            "reponse 3",
-            "reponse 4",
-            "reponse 5",
-            "reponse 6",
-            "reponse 7",
-            "reponse 8",
-            "reponse 9",
+            "$\\frac{3}{4}$",
+            "$\\frac{4}{5}$",
+            "$\\ln(3)$",
+            "$\\frac{8}{9}$",
+            "$\\frac{2}{3}$",
+            "0",
+            "$\\frac{9}{10}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{5}{4}$",
+            "$\\frac{8}{3}$"
           ],
-          "correctIndex": 0
-        }                
+          "correctIndex": 1
+        }                      
       ],
       "final": {
-        "name": "Dernière étape",
+        "name": "Synthèse",
         "question": "Quelle est la date de création de xxxxx ? Utilise tes réponses pour le savoir.",
-        "code": "41",
-        "mapLink": "https://www.google.com/maps?q=48.8566,2.3522"
+        "code": "0001",
+        "locationText": "Rendez-vous là où les grandes décisions se prennent"
       }
     },
     {
@@ -215,28 +216,28 @@ const enigmes = [
           "correctIndex": 0
         },     
         {
-          "name": "Question 4",
-          "question": "question olympiade",
+          "name": "Étude d’une équation avec logarithme",
+          "question": "Soit $f$ la fonction définie sur $]0,+\\infty[$ par $f(x) = x - \\ln(x)$. Pour $a > 1$, soit $x_a$ l’unique solution de l’équation $f(x) = a$. Quelle affirmation est correcte ?",
           "answers": [
-            "reponse 0",
-            "reponse 1",
-            "reponse 2",
-            "reponse 3",
-            "reponse 4",
-            "reponse 5",
-            "reponse 6",
-            "reponse 7",
-            "reponse 8",
-            "reponse 9",
+            "$x_a = a$ pour tout $a > 1$",
+            "$x_a < a$ pour tout $a > 1$",
+            "$x_a > a$ pour tout $a > 1$",
+            "$x_a = e^a$ pour tout $a > 1$",
+            "$x_a = a - \\ln(a)$ pour tout $a > 1$",
+            "$x_a = a + \\ln(a)$ pour tout $a > 1$",
+            "$1 < x_a < a$ pour tout $a > 1$",
+            "$x_a > a + 1$ pour tout $a > 1$",
+            "$x_a = a$ si et seulement si $a = e$",
+            "$x_a < 1$ pour tout $a > 1$"
           ],
-          "correctIndex": 0
-        }            
+          "correctIndex": 2
+        }                   
       ],
       "final": {
-        "name": "🔓 Déverrouille le mystère",
-        "question": "Bravo d’être arrivé jusque-là ! Tu as toutes les réponses… mais sauras-tu les assembler pour débloquer le secret final ? 🔐",
-        "code": "41",
-        "mapLink": "https://www.google.com/maps?q=48.8566,2.3522"
+        "name": "Synthèse",
+        "question": "Bravo d’être arrivé jusque-là ! vous avez toutes les réponses… mais Saurez-vous les assembler pour débloquer le secret final ? 🔐",
+        "code": "0002",
+        "locationText": "Vers le coin où l’on recharge les gourdes et les idées."
       }
     },
     {
@@ -295,28 +296,28 @@ const enigmes = [
           "correctIndex": 0
         },
         {
-          "name": "Question 4",
-          "question": "question olympiade",
+          "name": "Lieu géométrique dans le plan complexe",
+          "question": "Dans le plan complexe, on considère les points $A$, $B$ et $C$ d'affixes respectives $a = 2+i$, $b = 3-2i$ et $c = -1+3i$. L'ensemble des points $M$ d'affixe $z$ tels que $|z - a| + |z - b| = |a - b|$ est :",
           "answers": [
-            "reponse 0",
-            "reponse 1",
-            "reponse 2",
-            "reponse 3",
-            "reponse 4",
-            "reponse 5",
-            "reponse 6",
-            "reponse 7",
-            "reponse 8",
-            "reponse 9",
+            "Le cercle de centre $A$ et de rayon $|a - b|$",
+            "Le cercle de centre $B$ et de rayon $|a - b|$",
+            "L’ellipse de foyers $A$ et $B$ et de grand axe $|a - b|$",
+            "Le segment $[AB]$",
+            "La médiatrice du segment $[AB]$",
+            "La droite $(AB)$",
+            "L’ensemble vide",
+            "L’ensemble des points équidistants de $A$ et $B$",
+            "Un arc de cercle passant par $A$ et $B$",
+            "Le triangle $ABC$"
           ],
-          "correctIndex": 0
-        }    
+          "correctIndex": 2
+        }          
       ],
       "final": {
-        "name": "🔓 Déverrouille le mystère",
-        "question": "Bravo d’être arrivé jusque-là ! Tu as toutes les réponses… mais sauras-tu les assembler pour débloquer le secret final ? 🔐",
-        "code": "41",
-        "mapLink": "https://www.google.com/maps?q=48.8566,2.3522"
+        "name": "Synthèse",
+        "question": "Bravo d’être arrivé jusque-là ! vous avez toutes les réponses… mais Saurez-vous les assembler pour débloquer le secret final ? 🔐",
+        "code": "0002",
+        "locationText": "Direction l’entrée des grandes aventures quotidiennes."
       }
     },
     {
@@ -374,28 +375,28 @@ const enigmes = [
           ],
         },
         {
-          "name": "Question 4",
-          "question": "question olympiade",
+          "name": "Volume d’un tétraèdre dans un cube",
+          "question": "Soit $ABCDEFGH$ un cube d’arête 1. On considère les points $I$, $J$ et $K$ milieux respectifs des arêtes $[BC]$, $[CG]$ et $[GF]$. Quel est le volume du tétraèdre $AIJK$ ?",
           "answers": [
-            "reponse 0",
-            "reponse 1",
-            "reponse 2",
-            "reponse 3",
-            "reponse 4",
-            "reponse 5",
-            "reponse 6",
-            "reponse 7",
-            "reponse 8",
-            "reponse 9",
+            "$\\frac{1}{6}$",
+            "$\\frac{1}{8}$",
+            "$\\frac{1}{12}$",
+            "$\\frac{1}{24}$",
+            "$\\frac{1}{3}$",
+            "$\\frac{1}{4}$",
+            "$\\frac{\\sqrt{3}}{12}$",
+            "$\\frac{1}{16}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{1}{18}$"
           ],
-          "correctIndex": 0
-        }                
+          "correctIndex": 2
+        }                       
       ],
       "final": {
-        "name": "🔓 Déverrouille le mystère",
-        "question": "Bravo d’être arrivé jusque-là ! Tu as toutes les réponses… mais sauras-tu les assembler pour débloquer le secret final ? 🔐",
-        "code": "41",
-        "mapLink": "https://www.google.com/maps?q=48.8566,2.3522"
+        "name":  "Synthèse",
+        "question": "Bravo d’être arrivé jusque-là ! vous avez toutes les réponses… mais Saurez-vous les assembler pour débloquer le secret final ? 🔐",
+        "code": "0002",
+        "locationText": "Là où une phrase change ta façon de voir la journée."
       }
     }
 ]
