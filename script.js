@@ -273,19 +273,23 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("checkCodeBtn").addEventListener("click", () => {
     const code = document.getElementById("codeInput").value.trim();
     const correctCode = activeEnigme.final?.code;
-    const link = activeEnigme.final?.mapLink;
     const errorCode = document.getElementById("codeError");
-
+  
     if (code === correctCode) {
       const message = "Félicitations ! Tu as résolu cette énigme.";
+  
+      // 🔍 Recherche dans nextLocation en fonction du groupe
+      const groupDestination = activeEnigme.final?.nextLocation?.find(loc => loc.group === groupeLettre);
+  
       const mapLink = activeEnigme.final?.mapLink || null;
-      const locationText = activeEnigme.final?.locationText || null;
+      const locationText = groupDestination?.description || null;
+  
       afficherPopupSuccess(message, mapLink, locationText);
     } else {
       errorCode.classList.remove("hidden");
     }
   });
-
+  
   document.getElementById("restartBtn").addEventListener("click", () => {
     currentQuestionIndex = 0;
     reponsesUtilisateur = [];
