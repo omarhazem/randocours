@@ -165,10 +165,10 @@ const enigmes = [
       "code": "1371",
       "nextLocation": [
         { "group": "A", "description": "Direction l’endroit où la nature est toujours au cœur des débats", "lieu": "Club d’environnement" },
-        { "group": "B", "description": "Depart", "lieu": "Depart" },
+        { "group": "B", "description": "Revenez là où tout a commencé : la boîte à cadeau vous y attend, prête à s’ouvrir si vous détenez le bon code.", "lieu": "Depart" },
         { "group": "C", "description": "Direction l’endroit où la soif trouve son remède.", "lieu": "Fontaine d’eau" },
         { "group": "D", "description": "Une porte cachée, que seuls certains empruntent en silence.", "lieu": "Porte de l'etablissement" },
-        { "group": "E", "description": "Depart", "lieu": "Depart" }
+        { "group": "E", "description": "Revenez là où tout a commencé : la boîte à cadeau vous y attend, prête à s’ouvrir si vous détenez le bon code.", "lieu": "Depart" }
       ]
     }
   },
@@ -250,9 +250,9 @@ const enigmes = [
       "question": "Bravo d’être arrivé jusque-là ! vous avez toutes les réponses… mais Saurez-vous les assembler pour débloquer le secret final ? 🔐",
       "code": "4962",
       "nextLocation": [
-        { "group": "A", "description": "Depart", "lieu": "Depart" },
+        { "group": "A", "description": "Revenez là où tout a commencé : la boîte à cadeau vous y attend, prête à s’ouvrir si vous détenez le bon code.", "lieu": "Depart" },
         { "group": "B", "description": "Rendez-vous là où les grandes décisions se prennent", "lieu": "Bureau de directeur" },
-        { "group": "C", "description": "Depart", "lieu": "Depart" },
+        { "group": "C", "description": "Revenez là où tout a commencé : la boîte à cadeau vous y attend, prête à s’ouvrir si vous détenez le bon code.", "lieu": "Depart" },
         { "group": "D", "description": "Rendez-vous là où les grandes décisions se prennent", "lieu": "Bureau de directeur" },
         { "group": "E", "description": "Direction l’endroit où la nature est toujours au cœur des débats", "lieu": "Club d’environnement" }
       ]
@@ -425,7 +425,7 @@ const enigmes = [
         { "group": "A", "description": "Rendez-vous là où les grandes décisions se prennent", "lieu": "Bureau de directeur" },
         { "group": "B", "description": "Une porte cachée, que seuls certains empruntent en silence.", "lieu": "Porte de l'etablissement" },
         { "group": "C", "description": "Direction l’endroit où la nature est toujours au cœur des débats", "lieu": "Club d’environnement"},
-        { "group": "D", "description": "Depart", "lieu": "Depart" },
+        { "group": "D", "description": "Revenez là où tout a commencé : la boîte à cadeau vous y attend, prête à s’ouvrir si vous détenez le bon code.", "lieu": "Depart" },
         { "group": "E", "description": "Rendez-vous là où les grandes décisions se prennent", "lieu": "Bureau de directeur" }
       ]
   }
