@@ -3,9 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rondo Cours</title>
+  <title>Énigme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="enigmes.js"></script>
+  <script src="script.js" defer></script>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
-<body>
-hello all
+<body class="bg-gray-50 font-sans min-h-screen m-0 p-0 overflow-x-hidden">
+  <div class="w-full h-full flex flex-col md:flex-row min-h-screen max-w-full overflow-x-hidden">
+    
+    <!-- MENU LATÉRAL -->
+    <div class="bg-gray-900 text-white w-full md:w-1/4 p-4 flex md:flex-col items-center justify-around md:justify-start">
+      <ol id="sidebarMenu" class="flex md:flex-col gap-4 md:gap-6 mt-2 md:mt-10"></ol>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="flex-1 p-6 md:p-10 animate-fadeInUp overflow-auto">
+      <h2 id="enigmeTitle" class="text-2xl md:text-3xl font-extrabold text-center text-indigo-600 mb-4 tracking-tight animate-fade-in"></h2>
+      <h1 id="questionText" class="text-lg md:text-xl font-semibold text-gray-800 leading-relaxed mb-6"></h1>
+      <p id="indicationText" class="text-gray-600 mb-8">Choisis une réponse puis clique sur "Suivant".</p>
+
+      <!-- FORMULAIRE QCM -->
+      <form id="qcmForm" class="flex flex-col min-h-full">
+        <div id="optionsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"></div>
+        <div class="flex flex-col items-center">
+          <div id="result" class="text-center text-sm mb-4 text-red-500 hidden"></div>
+          <div class="flex gap-4">
+            <button type="button" id="btnPrev" class="hidden bg-gray-400 text-white font-semibold px-6 py-3 rounded-full shadow-md transition hover:bg-gray-500">
+              ← Précédent
+            </button>
+            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105">
+              Suivant →
+            </button>
+          </div>
+        </div>
+      </form>
+
+ <!-- ✅ SECTION SYNTHÈSE -->
+<div id="syntheseSection" class="hidden mt-10">
+  <h3 id="syntheseTitle" class="text-xl font-semibold text-gray-800 mb-2 text-center"></h3>
+  <p id="syntheseQuestion" class="text-gray-700 mb-6 text-center"></p>
+
+  <div class="overflow-x-auto mb-6">
+    <table class="w-full border border-gray-200 rounded text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="py-2 px-4 border-b text-left">#</th>
+          <th class="py-2 px-4 border-b text-left">Question</th>
+          <th class="py-2 px-4 border-b text-left">Réponse choisie</th>
+        </tr>
+      </thead>
+      <tbody id="resumeTableBody" class="bg-white"></tbody>
+    </table>
+  </div>
+
+  <!-- ✅ Centrage total -->
+      <div class="flex flex-col items-center gap-4">
+        <label for="codeInput" class="text-gray-700 font-medium text-center">Entrez le code final pour débloquer l'énigme :</label>
+        <input
+          type="text"
+          id="codeInput"
+          maxlength="10"
+          class="border border-gray-300 rounded px-4 py-2 w-full max-w-xs text-center"
+        />
+        <p id="codeError" class="text-red-500 text-sm hidden">❌ Code incorrect. Réessaie !</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+          <button
+            type="button"
+            id="checkCodeBtn"
+            class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105"
+          >
+            Vérifier le code 🔐
+          </button>
+
+          <button
+            type="button"
+            id="restartBtn"
+            class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:scale-105"
+          >
+            🔁 Recommencer l’énigme
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎉 Popup de félicitations -->
+<div id="successPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full text-center relative">
+    <h2 class="text-xl font-bold text-green-600 mb-3">🎉 Félicitations !</h2>
+    <p id="popupMessage" class="text-gray-800 mb-4">Vous avez réussi l’énigme.</p>
+    <div id="popupAction" class="mb-4"></div>
+    <button onclick="closePopup()" class="mt-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">
+      Fermer
+    </button>
+  </div>
+</div>
+
 </body>
 </html>
