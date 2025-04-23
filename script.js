@@ -9,6 +9,26 @@ const activeEnigme = enigmes[enigmeIndex >= 0 ? enigmeIndex : 0];
 
 let currentQuestionIndex = 0;
 let reponsesUtilisateur = [];
+let groupeLettre = "";
+
+function demarrerEnigme() {
+  const input = document.getElementById("groupInput");
+  const error = document.getElementById("groupError");
+  const letter = input.value.trim().toUpperCase();
+
+  if (!['A', 'B', 'C', 'D', 'E'].includes(letter)) {
+    error.classList.remove("hidden");
+    return;
+  }
+
+  groupeLettre = letter;
+  error.classList.add("hidden");
+
+  document.getElementById("introScreen").classList.add("hidden");
+  document.getElementById("enigmeContent").classList.remove("hidden");
+
+  afficherQuestion();
+}
 
 function afficherQuestion() {
   if (currentQuestionIndex >= activeEnigme.questions.length) {
@@ -189,6 +209,38 @@ function afficherPopupSuccess(message, mapLink = null, locationText = null) {
 function closePopup() {
   document.getElementById("successPopup").classList.add("hidden");
 }
+
+// 🔐 Stockage du groupe dans le localStorage
+function enregistrerGroupeEtAfficherFormulaire() {
+  const groupeInput = document.getElementById("groupeInput");
+  const groupe = groupeInput.value.trim().toUpperCase();
+
+  if (!groupe || !["A", "B", "C", "D", "E"].includes(groupe)) {
+    alert("Veuillez entrer une lettre de groupe valide (A à E).");
+    return;
+  }
+
+  localStorage.setItem("groupe", groupe);
+
+  // Animation de disparition du bloc d'intro
+  const intro = document.getElementById("groupeIntro");
+  const enigmeContent = document.getElementById("enigmeContent");
+
+  intro.classList.add("animate-fadeOut");
+  setTimeout(() => {
+    intro.classList.add("hidden");
+    enigmeContent.classList.remove("hidden");
+    enigmeContent.classList.add("animate-fadeInUp");
+  }, 600);
+}
+
+// Attacher l’événement une fois le DOM chargé
+document.addEventListener("DOMContentLoaded", () => {
+  const groupeBtn = document.getElementById("validerGroupeBtn");
+  if (groupeBtn) {
+    groupeBtn.addEventListener("click", enregistrerGroupeEtAfficherFormulaire);
+  }
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
